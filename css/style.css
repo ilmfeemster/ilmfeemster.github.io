@@ -209,6 +209,7 @@ nav h1 a [class*="fa-"]:hover {
     border-left: 1px solid var(--aqua);
     border-top: 1px solid var(--aqua);
     border-radius: 25px;
+    max-width: 100%;
 }
 
 /* contact section */
@@ -252,7 +253,6 @@ footer ul {
     #projects img {
         grid-column: 1/6;
         grid-row: 1/2;
-        max-width: 100%;
     }
     .text {
         grid-column: 5/11;
