@@ -252,7 +252,7 @@ footer ul {
     #projects img {
         grid-column: 1/6;
         grid-row: 1/2;
-        max-width: 95vw;
+        max-width: 100%;
     }
     .text {
         grid-column: 5/11;
