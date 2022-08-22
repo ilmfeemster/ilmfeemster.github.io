@@ -21,8 +21,6 @@
             window.onload = function() {
                 document.getElementById('contact-form').addEventListener('submit', function(event) {
                     event.preventDefault();
-                    // generate a five digit number for the contact_number variable
-                    this.contact_number.value = Math.random() * 100000 | 0;
                     emailjs.sendForm('portfolio_email', 'portfolio_template', this)
                         .then(function() {
                             console.log('SUCCESS!');
@@ -137,15 +135,14 @@
                 <h2>Contact me</h2>
                 <p>I'm always interested in hearing about job opportunities.</p>
                 <form id="contact-form">
-                    <input type="hidden" name="contact_number">
                     <label>Name</label>
-                    <input type="text" name="user_name">
+                    <input type="text" id="name" name="user_name">
                     <br>
                     <label>Email</label>
-                    <input type="email" name="user_email">
+                    <input type="email" id="email" name="user_email">
                     <br>
                     <label>Message</label>
-                    <textarea name="message" rows="4"></textarea>
+                    <textarea name="message" id="message" rows="4"></textarea>
                     <br>
                     <input class="button" id="sendButton" type="submit" value="Send Email">
                 </form>
@@ -179,4 +176,5 @@
             <p><small>&copy; 2022 Immanuel Matthews. All rights reserved.</small></p>
         </footer>
     </body>
+    <script src="index.js"></script>
 </html>
